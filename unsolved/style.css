@@ -16,8 +16,10 @@ body {
     "header header"
     "nav img_card__container"
     "footer footer";
-    grid-template-rows: .25fr 4fr 1fr;
-    grid-template-columns: 1fr 1fr;
+    row-gap: 1ch;
+    column-gap: 1ch;
+    grid-template-rows: .20fr 4fr .15fr;
+    grid-template-columns: repeat(2, 1f);
 }
 
 .header {
@@ -68,8 +70,9 @@ body {
 
 
 .img_card__container {
-  grid-template-columns: repeat (auto-fill, minmax(300px, 1fr));
+  grid-area: img_card__container;
   grid-auto-rows: 350px;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
 }
 
 .img_card {
