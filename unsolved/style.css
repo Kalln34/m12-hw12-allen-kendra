@@ -15,9 +15,11 @@ body {
 
 .grid-container {
   display: grid;
-  grid-template-areas: "header" "nav" "img_card__container" "footer";
-  grid-template-rows: center;
+  grid-template-areas: 
+  'header nav' 
+  'img_card__container footer';
   grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
 }
 
 .header {
@@ -26,13 +28,13 @@ body {
   display: grid;
   align-items: center;
   justify-items: center;
-  grid-area: header;
 }
 
 .header__title {
   font-size: 3rem;
   margin: 0;
   font-family: 'Pacifico', cursive;
+  grid-area: header;
 }
 
 .nav__container {
@@ -43,9 +45,6 @@ body {
   min-width: 200px;
   justify-items: center;
   padding: 12px 0 24px;
-}
-
-.nav {
   grid-area: nav;
 }
 
@@ -94,7 +93,7 @@ body {
   display: grid;
   align-items: center;
   justify-items: center;
-  grid-area: footer;
+  grid-area: foot;
 }
 
 @media screen and (max-width: 1100px) {
